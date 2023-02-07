@@ -1,0 +1,15 @@
+C:\Users\carlo\Desktop\C#\cSharpLearning\cSharpBank\cSharpBank\bin\Debug\net6.0\cSharpBank.exe
+C:\Users\carlo\Desktop\C#\cSharpLearning\cSharpBank\cSharpBank\bin\Debug\net6.0\cSharpBank.deps.json
+C:\Users\carlo\Desktop\C#\cSharpLearning\cSharpBank\cSharpBank\bin\Debug\net6.0\cSharpBank.runtimeconfig.json
+C:\Users\carlo\Desktop\C#\cSharpLearning\cSharpBank\cSharpBank\bin\Debug\net6.0\cSharpBank.dll
+C:\Users\carlo\Desktop\C#\cSharpLearning\cSharpBank\cSharpBank\bin\Debug\net6.0\cSharpBank.pdb
+C:\Users\carlo\Desktop\C#\cSharpLearning\cSharpBank\cSharpBank\obj\Debug\net6.0\cSharpBank.csproj.AssemblyReference.cache
+C:\Users\carlo\Desktop\C#\cSharpLearning\cSharpBank\cSharpBank\obj\Debug\net6.0\cSharpBank.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\carlo\Desktop\C#\cSharpLearning\cSharpBank\cSharpBank\obj\Debug\net6.0\cSharpBank.AssemblyInfoInputs.cache
+C:\Users\carlo\Desktop\C#\cSharpLearning\cSharpBank\cSharpBank\obj\Debug\net6.0\cSharpBank.AssemblyInfo.cs
+C:\Users\carlo\Desktop\C#\cSharpLearning\cSharpBank\cSharpBank\obj\Debug\net6.0\cSharpBank.csproj.CoreCompileInputs.cache
+C:\Users\carlo\Desktop\C#\cSharpLearning\cSharpBank\cSharpBank\obj\Debug\net6.0\cSharpBank.dll
+C:\Users\carlo\Desktop\C#\cSharpLearning\cSharpBank\cSharpBank\obj\Debug\net6.0\refint\cSharpBank.dll
+C:\Users\carlo\Desktop\C#\cSharpLearning\cSharpBank\cSharpBank\obj\Debug\net6.0\cSharpBank.pdb
+C:\Users\carlo\Desktop\C#\cSharpLearning\cSharpBank\cSharpBank\obj\Debug\net6.0\cSharpBank.genruntimeconfig.cache
+C:\Users\carlo\Desktop\C#\cSharpLearning\cSharpBank\cSharpBank\obj\Debug\net6.0\ref\cSharpBank.dll
