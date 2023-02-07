@@ -10,6 +10,9 @@ andrewAccount.balance = 100;
 Console.WriteLine("Andrew balance: " + andrewAccount.balance);
 
 andrewAccount.Deposit(100);
+andrewAccount.Withdraw(50);
+
+
 
 
 

@@ -17,31 +17,6 @@ namespace cSharpBank
         {
             this.balance += amount;
         }
-
-        public bool Withdraw(double amount)
-        {
-            if (amount <= this.balance)
-            {
-                this.balance -= amount;
-                return true;
-            }
-            else
-            { return false; }
-        }
-
-        public bool Transfer(double amount, CheckingAccount targetAccount)
-        {
-            if (this.balance < amount)
-            {
-                return false;
-            }
-            else
-            {
-                this.balance -= amount;
-                targetAccount.balance += amount;
-                return true;
-            }
-        }
     }
 }
  
