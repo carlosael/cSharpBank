@@ -1,4 +1,5 @@
-﻿using cSharpBank;
+﻿using cSharpBank.AccountHolder;
+using cSharpBank.Accounts;
 
 //CheckingAccount andrewAccount = new CheckingAccount();
 //andrewAccount.accountHolder = "Andrew Stuart";
@@ -36,6 +37,19 @@ account.account = "1010-6";
 account.balance = 100;
 
 Console.WriteLine("Account Holder: " + account.accountHolder.name);
+
+
+
+CheckingAccount account2 = new CheckingAccount();
+account2.accountHolder = new Client();
+account2.accountHolder.name = "Joseph Climber";
+account2.accountHolder.profession = "Analist";
+account2.accountHolder.cpf = "05532223235";
+account2.agency = 12;
+account2.account = "1010-1";
+account2.balance = 500;
+
+Console.WriteLine("Account Holder: " + account2.accountHolder.name);
 
 
 
