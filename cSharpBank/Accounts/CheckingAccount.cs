@@ -1,10 +1,11 @@
-﻿using System;
+﻿using cSharpBank.AccountHolder;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace cSharpBank
+namespace cSharpBank.Accounts
 {
     public class CheckingAccount
     {
@@ -15,14 +16,14 @@ namespace cSharpBank
         public Client accountHolder;
         public void Deposit(double amount)
         {
-            this.balance += amount;
+            balance += amount;
         }
 
         public bool Withdraw(double amount)
         {
-            if (amount <= this.balance)
+            if (amount <= balance)
             {
-                this.balance -= amount;
+                balance -= amount;
                 return true;
             }
             else
@@ -31,17 +32,16 @@ namespace cSharpBank
 
         public bool Transfer(double amount, CheckingAccount targetAccount)
         {
-            if (this.balance < amount)
+            if (balance < amount)
             {
                 return false;
             }
             else
             {
-                this.Withdraw(amount);
+                Withdraw(amount);
                 targetAccount.Deposit(amount);
                 return true;
             }
         }
     }
 }
- 
