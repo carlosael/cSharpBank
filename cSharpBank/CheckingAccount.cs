@@ -11,8 +11,8 @@ namespace cSharpBank
         public int agency;
         public string account;
         public double balance = 0;
-        public string accountHolder;
 
+        public Client accountHolder;
         public void Deposit(double amount)
         {
             this.balance += amount;
