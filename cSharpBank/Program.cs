@@ -25,31 +25,35 @@ using cSharpBank.Accounts;
 //Console.WriteLine("Andrew balance: " + andrewAccount.balance);
 //Console.WriteLine("Mary balance: " + maryAccount.balance);
 
-Client client = new Client();
-client.name = "Andrew Stuart";
-client.profession = "Engineer";
-client.cpf = "09988998998";
+//Client client = new Client();
+//client.name = "Andrew Stuart";
+//client.profession = "Engineer";
+//client.cpf = "09988998998";
 
-CheckingAccount account = new CheckingAccount();
-account.accountHolder = client;
-account.agency = 15;
-account.account = "1010-6";
-account.balance = 100;
+//CheckingAccount account = new CheckingAccount();
+//account.accountHolder = client;
+//account.agency = 15;
+//account.account = "1010-6";
+//account.balance = 100;
 
-Console.WriteLine("Account Holder: " + account.accountHolder.name);
+//Console.WriteLine("Account Holder: " + account.accountHolder.name);
 
 
 
-CheckingAccount account2 = new CheckingAccount();
-account2.accountHolder = new Client();
-account2.accountHolder.name = "Joseph Climber";
-account2.accountHolder.profession = "Analist";
-account2.accountHolder.cpf = "05532223235";
-account2.agency = 12;
-account2.account = "1010-1";
-account2.balance = 500;
+//CheckingAccount account2 = new CheckingAccount();
+//account2.accountHolder = new Client();
+//account2.accountHolder.name = "Joseph Climber";
+//account2.accountHolder.profession = "Analist";
+//account2.accountHolder.cpf = "05532223235";
+//account2.agency = 12;
+//account2.account = "1010-1";
+//account2.balance = 500;
 
-Console.WriteLine("Account Holder: " + account2.accountHolder.name);
+//Console.WriteLine("Account Holder: " + account2.accountHolder.name);
+
+CheckingAccount account3 = new CheckingAccount();
+account3.SetBalance(150);
+Console.WriteLine(account3.GetBalance());
 
 
 

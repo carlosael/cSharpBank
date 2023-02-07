@@ -11,7 +11,7 @@ namespace cSharpBank.Accounts
     {
         public int agency;
         public string account;
-        public double balance = 0;
+        private double balance = 0;
 
         public Client accountHolder;
         public void Deposit(double amount)
@@ -42,6 +42,23 @@ namespace cSharpBank.Accounts
                 targetAccount.Deposit(amount);
                 return true;
             }
+        }
+
+        public void SetBalance(double amount)
+        {
+            if (amount < 0) 
+            {
+                return;
+            }
+            else
+            {
+                this.balance = amount;
+            }
+        }
+
+        public double GetBalance()
+        {
+            return this.balance;
         }
     }
 }
