@@ -9,11 +9,22 @@ namespace cSharpBank.Accounts
 {
     public class CheckingAccount
     {
-        public int agency;
-        public string account;
+        private int agency;
+        public int Agency
+        {
+            get { return this.agency; }
+            private set { 
+                    if(value > 0)
+                    {
+                        this.agency = value;
+                    }
+                }
+        }
+        private string Account {  get; set; }  
+        
         private double balance = 0;
 
-        public Client accountHolder;
+        public Client AccountHolder { get; set; }
         public void Deposit(double amount)
         {
             balance += amount;
@@ -59,6 +70,12 @@ namespace cSharpBank.Accounts
         public double GetBalance()
         {
             return this.balance;
+        }
+
+        public CheckingAccount(int agency, string account)
+        {
+            this.agency = agency;
+            this.Account = account;
         }
     }
 }

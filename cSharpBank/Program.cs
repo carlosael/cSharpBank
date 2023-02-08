@@ -51,9 +51,15 @@ using cSharpBank.Accounts;
 
 //Console.WriteLine("Account Holder: " + account2.accountHolder.name);
 
-CheckingAccount account3 = new CheckingAccount();
-account3.SetBalance(150);
-Console.WriteLine(account3.GetBalance());
+//CheckingAccount account3 = new CheckingAccount();
+//account3.Agency = 18;
+//account3.SetBalance(150);
+//Console.WriteLine(account3.GetBalance());
+//Console.WriteLine(account3.Agency);
+
+CheckingAccount account4 = new CheckingAccount(16, "1012-45");
+account4.SetBalance(500);
+account4.AccountHolder = new Client();
 
 
 
