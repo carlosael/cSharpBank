@@ -9,6 +9,10 @@ namespace cSharpBank.Accounts
 {
     public class CheckingAccount
     {
+        public static int AccountsCreated { get; private set; }
+
+        public static float OperationFee { get; private set; }
+
         private int agency;
         public int Agency
         {
@@ -74,8 +78,15 @@ namespace cSharpBank.Accounts
 
         public CheckingAccount(int agency, string account)
         {
+            if (agency <= 0)
+            {
+                throw new ArgumentException("Agency number must be higher than 0.", nameof(agency));
+            }
             this.agency = agency;
             this.Account = account;
+
+            //OperationFee = 30 / AccountsCreated;
+            AccountsCreated++;
         }
     }
 }
