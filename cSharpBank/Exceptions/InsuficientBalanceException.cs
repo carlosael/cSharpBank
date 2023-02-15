@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace cSharpBank.Exceptions
 {
-    public class InsuficientBalanceException : Exception
+    public class InsuficientBalanceException : FinanceOperationException
     {
         public InsuficientBalanceException(string message) : base(message)
         { 
