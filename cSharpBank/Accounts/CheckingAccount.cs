@@ -1,4 +1,5 @@
 ﻿using cSharpBank.AccountHolder;
+using cSharpBank.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -42,7 +43,9 @@ namespace cSharpBank.Accounts
                 return true;
             }
             else
-            { return false; }
+            {
+                throw new InsuficientBalanceException("Insuficient balance.");
+            }
         }
 
         public bool Transfer(double amount, CheckingAccount targetAccount)
