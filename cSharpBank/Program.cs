@@ -20,6 +20,7 @@ class Program
             WriteBuffer(buffer);
         }
         
+        fileStream.Close();
         Console.ReadLine();
     }
 
