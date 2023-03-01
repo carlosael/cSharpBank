@@ -1,22 +1,41 @@
 ﻿using cSharpBank.AccountHolder;
 using cSharpBank.Accounts;
 using cSharpBank.Exceptions;
+using System.Text;
 
-try
+class Program
 {
-    CheckingAccount account1 = new CheckingAccount(120, "1011-45");
-    account1.Deposit(100);
-    account1.Withdraw(200);
-    Console.WriteLine(account1.GetBalance());
-}
-catch (ArgumentException ex)
-{
-    Console.WriteLine(ex.Message);
-    Console.WriteLine("Parameter with error: " + ex.ParamName);
-}
-catch (InsuficientBalanceException ex)
-{
-    Console.WriteLine(ex.Message);
+    static void Main(string[] args)
+    {
+        var fileAdress = "accounts.txt";
+        var bytesRead = -1;
+
+        var fileStream = new FileStream(fileAdress, FileMode.Open);
+        var buffer = new byte[1024];
+        bytesRead = fileStream.Read(buffer, 0, 1024);
+
+        while(bytesRead != 0) 
+        {
+            bytesRead = fileStream.Read(buffer, 0, 1024);
+            WriteBuffer(buffer);
+        }
+        
+        Console.ReadLine();
+    }
+
+    static void WriteBuffer(byte[] buffer)
+    {
+        var utf8 = new UTF8Encoding();
+
+        var text = utf8.GetString(buffer);
+        Console.Write(text);
+
+        //foreach (var myByte in buffer)
+        //{
+        //    Console.WriteLine(myByte);
+        //    Console.WriteLine(" ");
+        //}
+    }
 }
 
 
