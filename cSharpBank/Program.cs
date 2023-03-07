@@ -29,7 +29,8 @@ partial class Program
             }
 
         }
-        CreatingCsvFile();
+        CreatingCsvFileWithWriter();
+        //CreatingCsvFile();
         Console.WriteLine();
     }
 
@@ -47,6 +48,20 @@ partial class Program
 
             fileStream.Write(bytes, 0, bytes.Length);
 
+        }
+        Console.WriteLine();
+
+
+    }
+
+    static void CreatingCsvFileWithWriter()
+    {
+        var newFileAdress = "exportedAccounts.csv";
+
+        using (var fileStream = new FileStream(newFileAdress, FileMode.Create))
+        using (var writer = new StreamWriter(fileStream))
+        {
+            writer.Write("account2");
         }
         Console.WriteLine();
 
