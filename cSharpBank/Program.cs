@@ -26,21 +26,21 @@ partial class Program
                             $"Balance: {checkingAccount.GetBalance()} \n";
                 Console.WriteLine(message);
 
+                CreatingCsvFile(message);
             }
 
         }
-        CreatingCsvFileWithWriter();
-        //CreatingCsvFile();
+        //CreatingCsvFileWithWriter();
         Console.WriteLine();
     }
 
-    static void CreatingCsvFile()
+    static void CreatingCsvFile(string accountData)
     {
         var newFileAdress = "exportedAccounts.csv";
 
-        using (var fileStream = new FileStream(newFileAdress, FileMode.Create))
+        using (var fileStream = new FileStream(newFileAdress, FileMode.Append))
         {
-            var accountAsString = "account";
+            var accountAsString = accountData;
 
             var enconding = Encoding.UTF8;
 
