@@ -25,8 +25,8 @@ namespace cSharpBank.Accounts
                     }
                 }
         }
-        private string Account {  get; set; }  
-        
+        public string Account { get; set; }
+
         private double balance = 0;
 
         public Client AccountHolder { get; set; }
