@@ -1,6 +1,7 @@
 ﻿using cSharpBank.AccountHolder;
 using cSharpBank.Accounts;
 using cSharpBank.Exceptions;
+using System.IO;
 using System.Text;
 
 partial class Program
@@ -28,7 +29,28 @@ partial class Program
             }
 
         }
+        CreatingCsvFile();
         Console.WriteLine();
+    }
+
+    static void CreatingCsvFile()
+    {
+        var newFileAdress = "exportedAccounts.csv";
+
+        using (var fileStream = new FileStream(newFileAdress, FileMode.Create))
+        {
+            var accountAsString = "account";
+
+            var enconding = Encoding.UTF8;
+
+            var bytes = enconding.GetBytes(accountAsString);
+
+            fileStream.Write(bytes, 0, bytes.Length);
+
+        }
+        Console.WriteLine();
+
+
     }
 
     static CheckingAccount ConvertStringToCheckingAccount(string lineRead)
